@@ -1,0 +1,182 @@
+/* Base styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+      Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #000;
+    color: #fff;
+    line-height: 1.6;
+  }
+
+  /* Hide default cursor */
+  * {
+    cursor: none;
+  }
+
+  /* Custom cursor */
+  .custom-cursor {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    mix-blend-mode: difference;
+  }
+
+  /* Header styling */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+  }
+
+  .logo img {
+    height: 30px;
+    width: auto;
+  }
+
+  .connect-wallet {
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+    border-radius: 20px;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .connect-wallet:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  /* Main content container */
+  .container {
+    max-width: 1200px;
+    margin: 100px auto 40px;
+    padding: 0 40px;
+  }
+
+  /* Profile section */
+  .profile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 60px;
+  }
+
+  .avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    margin-right: 30px;
+  }
+
+  .avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .profile-info h1 {
+    font-size: 42px;
+    margin: 0 0 10px 0;
+  }
+
+  .profile-info h2 {
+    font-size: 24px;
+    font-weight: normal;
+    margin: 0 0 10px 0;
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  .profile-info .username {
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  /* About section */
+  .about {
+    margin-bottom: 60px;
+  }
+
+  .about h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+
+  .about p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  /* Work experience section */
+  .work-experience h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+
+  .job {
+    display: flex;
+    margin-bottom: 40px;
+  }
+
+  .job-date {
+    width: 120px;
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  .job-details {
+    flex: 1;
+  }
+
+  .job-title {
+    font-size: 24px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+  }
+
+  .job-title svg {
+    margin-left: 10px;
+    width: 16px;
+    height: 16px;
+  }
+
+  .job-description {
+    margin-bottom: 20px;
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  .tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .tech-item {
+    margin-right: 20px;
+    margin-bottom: 10px;
+    color: rgba(255, 255, 255, 0.6);
+    display: flex;
+    align-items: center;
+  }
+
+  .tech-item:before {
+    content: '•';
+    margin-right: 8px;
+  }
+
+  /* Remove the random dot */
+  .random-dot {
+    display: none;
+  }
