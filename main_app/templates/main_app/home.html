@@ -1,0 +1,133 @@
+{% extends 'main_app/index.html' %} {% block content %}
+<div class="text-center mt-20">
+  <img
+    src="https://tecdn.b-cdn.net/img/new/avatars/5.webp"
+    class="mx-auto mb-4 w-32 rounded-lg"
+    alt="Avatar"
+  />
+  <h5 class="mb-2 text-xl font-medium leading-tight">Dana Gabay</h5>
+  <p class="text-neutral-500 dark:text-neutral-400">Fullstack Web Developer</p>
+</div>
+
+<!-- Simple Glassmorphism Introduction Card -->
+<div class="w-full max-w-lg mx-auto mt-10">
+  <!-- Glassmorphism Card -->
+  <div
+    class="backdrop-blur-lg bg-white/10 rounded-xl border border-white/20 shadow-xl p-6"
+  >
+    <!-- Card Header -->
+    {% comment %}
+    <div class="mb-4">
+      <h1 class="text-2xl font-bold text-white">Introduction</h1>
+      <div class="w-full h-px bg-white/20 mt-2"></div>
+    </div>
+    {% endcomment %}
+
+    <!-- Introduction Text -->
+    <div>
+      <p class="text-gray-600 leading-relaxed">
+        Welcome to my website! Hi, I'm Dana Gabay a Full Stack Web Developer who
+        enjoys building seamless, user-friendly web applications from front to
+        back. With a passion for clean code, creative design, and
+        problem-solving.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mt-4">
+        My passion is web development and web design, and I'm dedicated to . I
+        enjoy [your interests] and am always looking for new challenges in [your
+        field].
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <!-- Profile section -->
+  {% comment %}
+  <section class="profile">
+    <div class="avatar">
+      <img src="{% static 'images/your-avatar.jpg' %}" alt="Your Avatar" />
+    </div>
+    <div class="profile-info">
+      <h1>Dana Gabay</h1>
+      <h2>Fullstack Web Developer</h2>
+      <div class="username">your-username.eth</div>
+    </div>
+  </section>
+  {% endcomment %}
+
+  <!-- About section -->
+  {% comment %}
+  <section class="about">
+    <h2>About</h2>
+    <p>
+      GM, I'm [Your Name]. I enjoy building dynamic, creative products from
+      start to finish. Focused on developing intuitive experiences that
+      constantly grow and improve based on user metrics. Always shipping.
+    </p>
+  </section>
+  {% endcomment %}
+
+  <!-- Work experience section -->
+  {% comment %}
+  <section class="work-experience">
+    <h2>Work Experience</h2>
+
+    <div class="job">
+      <div class="job-date">2022 - present</div>
+      <div class="job-details">
+        <div class="job-title">
+          Senior Developer – Company Name
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M7 17L17 7M17 7H7M17 7V17"></path>
+          </svg>
+        </div>
+        <div class="job-description">
+          Brief description of your role and key achievements. Focus on results
+          and specific projects you completed.
+        </div>
+        <div class="tech-stack">
+          <span class="tech-item">React</span>
+          <span class="tech-item">Node.js</span>
+          <span class="tech-item">TypeScript</span>
+          <span class="tech-item">Other Tech</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="job">
+      <div class="job-date">2020 - 2022</div>
+      <div class="job-details">
+        <div class="job-title">
+          Developer Role – Previous Company
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M7 17L17 7M17 7H7M17 7V17"></path>
+          </svg>
+        </div>
+        <div class="job-description">
+          Led a team of developers to build products. Collaborated closely with
+          product team to deliver features on time and track objectives.
+        </div>
+        <div class="tech-stack">
+          <span class="tech-item">JavaScript</span>
+          <span class="tech-item">CSS</span>
+          <span class="tech-item">Python</span>
+          <span class="tech-item">Other Tech</span>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+{% endcomment %} {% endblock %}

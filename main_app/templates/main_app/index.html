@@ -10,63 +10,56 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-    <style>
-      /* Keyframe animation for the pastel rainbow effect */
-      @keyframes rainbow {
-        0% {
-          color: #ffadad;
-        }
-        14% {
-          color: #ffecb3;
-        }
-        28% {
-          color: #c2f0c2;
-        }
-        42% {
-          color: #b3e0ff;
-        }
-        57% {
-          color: #c2c2f0;
-        }
-        71% {
-          color: #ffb3d9;
-        }
-        85% {
-          color: #ffb3b3;
-        }
-        100% {
-          color: #ffadad;
-        }
-      }
-
-      /* Applying the animation */
-      .rainbow-text {
-        animation: rainbow 8s linear infinite;
-      }
-    </style>
     <!-- Custom cursor element -->
     <div class="custom-cursor"></div>
 
     <!-- Header with logo and wallet -->
-    <nav class="bg-black">
+    <nav class="backdrop-blur-lg bg-white/10 rounded-xl border border-white/20 shadow-xl">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-xl">
         <div class="flex justify-between h-16">
           <div class="flex items-center">
+            {% comment %}
             <img
               class="avatar2"
               src="{% static 'images/your-avatar.jpg' %}"
               alt="Your Avatar"
             />
+            {% endcomment %}
+            <div class="flex">
+              <a
+                href="{% url 'home' %}"
+                class="text-gray-600 hover:text-yellow-100 inline-flex items-center"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
+                  />
+                </svg>
+              </a>
+            </div>
+            </div>
+            {% comment %}
             <a href="#" class="text-xl font-medium mt-8 rainbow-text">
               Dana Gabay
             </a>
           </div>
+          {% endcomment %}
 
           <div class="flex items-center space-x-6">
             <a
-              href=""
+              href="{% url 'about' %}"
               class="text-gray-600 hover:text-pink-200 inline-flex items-center"
             >
+              {% comment %}
               <svg
                 class="w-5 h-5 nav-icon"
                 fill="none"
@@ -80,6 +73,7 @@
                   d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
                 />
               </svg>
+              {% endcomment %}
               <span class="ml-2">About</span>
             </a>
             <form action="" method="post" class="inline-flex">
@@ -88,6 +82,7 @@
                 type="submit"
                 class="text-gray-600 hover:text-blue-200 inline-flex items-center"
               >
+                {% comment %}
                 <svg
                   class="w-5 h-5 nav-icon"
                   fill="none"
@@ -101,14 +96,16 @@
                     d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"
                   />
                 </svg>
+                {% endcomment %}
                 <span class="ml-2">Projects</span>
               </button>
             </form>
 
             <a
               href=""
-              class="text-gray-600 hover:text-yellow-200 inline-flex items-center"
+              class="text-gray-600 hover:text-yellow-100 inline-flex items-center"
             >
+              {% comment %}
               <svg
                 class="w-5 h-5 nav-icon"
                 fill="none"
@@ -122,123 +119,15 @@
                   d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"
                 />
               </svg>
+              {% endcomment %}
               <span class="ml-2">Contact</span>
-            </a>
-            <a
-              href=""
-              class="text-gray-600 hover:text-emerald-600 inline-flex items-center"
-            >
-              <svg
-                class="w-5 h-5 nav-icon"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"
-                />
-              </svg>
-              <span class="ml-2">Sign Up</span>
             </a>
           </div>
         </div>
       </div>
     </nav>
 
-    <div class="container">
-      <!-- Profile section -->
-      {% comment %}
-      <section class="profile">
-        <div class="avatar">
-          <img src="{% static 'images/your-avatar.jpg' %}" alt="Your Avatar" />
-        </div>
-        <div class="profile-info">
-          <h1>Dana Gabay</h1>
-          <h2>Fullstack Web Developer</h2>
-          <div class="username">your-username.eth</div>
-        </div>
-      </section>
-      {% endcomment %}
-
-      <!-- About section -->
-      {% comment %}
-      <section class="about">
-        <h2>About</h2>
-        <p>
-          GM, I'm [Your Name]. I enjoy building dynamic, creative products from
-          start to finish. Focused on developing intuitive experiences that
-          constantly grow and improve based on user metrics. Always shipping.
-        </p>
-      </section>
-      {% endcomment %}
-
-      <!-- Work experience section -->
-      {% comment %}
-      <section class="work-experience">
-        <h2>Work Experience</h2>
-
-        <div class="job">
-          <div class="job-date">2022 - present</div>
-          <div class="job-details">
-            <div class="job-title">
-              Senior Developer – Company Name
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path d="M7 17L17 7M17 7H7M17 7V17"></path>
-              </svg>
-            </div>
-            <div class="job-description">
-              Brief description of your role and key achievements. Focus on
-              results and specific projects you completed.
-            </div>
-            <div class="tech-stack">
-              <span class="tech-item">React</span>
-              <span class="tech-item">Node.js</span>
-              <span class="tech-item">TypeScript</span>
-              <span class="tech-item">Other Tech</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="job">
-          <div class="job-date">2020 - 2022</div>
-          <div class="job-details">
-            <div class="job-title">
-              Developer Role – Previous Company
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path d="M7 17L17 7M17 7H7M17 7V17"></path>
-              </svg>
-            </div>
-            <div class="job-description">
-              Led a team of developers to build products. Collaborated closely
-              with product team to deliver features on time and track
-              objectives.
-            </div>
-            <div class="tech-stack">
-              <span class="tech-item">JavaScript</span>
-              <span class="tech-item">CSS</span>
-              <span class="tech-item">Python</span>
-              <span class="tech-item">Other Tech</span>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-    {% endcomment %}
+    
 
     <script>
       // Custom cursor functionality
@@ -258,9 +147,30 @@
 
         // Show cursor when mouse enters window
         document.addEventListener('mouseenter', () => {
-          cursor.style.display = 'block';
+            cursor.style.display = 'block';
         });
-      });
-    </script>
-  </body>
+    });
+</script>
+{% block content %}{% endblock %}
+<footer class="footer fixed bottom-0 left-0 w-full">
+    <div class="px-4 py-6 md:flex md:items-center md:justify-between backdrop-blur-lg bg-white/10 rounded-xl border border-white/20 shadow-xl">
+        <span class="text-sm text-gray-500 dark:text-gray-300 sm:text-center">© 2025 Dana Gabay
+        </span>
+        <div class="flex mt-4 sm:justify-center md:mt-0 space-x-5 rtl:space-x-reverse">
+                <a href="#" class="text-gray-600 hover:text-gray-900 dark:hover:text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="40" height="40" viewBox="0,0,256,256">
+                        <g fill-rule="evenodd" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(8.53333,8.53333)"><path d="M24,4h-18c-1.105,0 -2,0.895 -2,2v18c0,1.105 0.895,2 2,2h18c1.105,0 2,-0.895 2,-2v-18c0,-1.105 -0.895,-2 -2,-2zM10.954,22h-2.95v-9.492h2.95zM9.449,11.151c-0.951,0 -1.72,-0.771 -1.72,-1.72c0,-0.949 0.77,-1.719 1.72,-1.719c0.948,0 1.719,0.771 1.719,1.719c0,0.949 -0.771,1.72 -1.719,1.72zM22.004,22h-2.948v-4.616c0,-1.101 -0.02,-2.517 -1.533,-2.517c-1.535,0 -1.771,1.199 -1.771,2.437v4.696h-2.948v-9.492h2.83v1.297h0.04c0.394,-0.746 1.356,-1.533 2.791,-1.533c2.987,0 3.539,1.966 3.539,4.522z"></path></g></g>
+                        </svg>
+                    <span class="sr-only">Twitter page</span>
+                </a>
+                <a href="https://github.com/DanaG314" class="text-gray-600 hover:text-gray-900 dark:hover:text-white">
+                    <svg class="w-8 h-8" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 .333A9.911 9.911 0 0 0 6.866 19.65c.5.092.678-.215.678-.477 0-.237-.01-1.017-.014-1.845-2.757.6-3.338-1.169-3.338-1.169a2.627 2.627 0 0 0-1.1-1.451c-.9-.615.07-.6.07-.6a2.084 2.084 0 0 1 1.518 1.021 2.11 2.11 0 0 0 2.884.823c.044-.503.268-.973.63-1.325-2.2-.25-4.516-1.1-4.516-4.9A3.832 3.832 0 0 1 4.7 7.068a3.56 3.56 0 0 1 .095-2.623s.832-.266 2.726 1.016a9.409 9.409 0 0 1 4.962 0c1.89-1.282 2.717-1.016 2.717-1.016.366.83.402 1.768.1 2.623a3.827 3.827 0 0 1 1.02 2.659c0 3.807-2.319 4.644-4.525 4.889a2.366 2.366 0 0 1 .673 1.834c0 1.326-.012 2.394-.012 2.72 0 .263.18.572.681.475A9.911 9.911 0 0 0 10 .333Z" clip-rule="evenodd"/>
+                    </svg>
+                    <span class="sr-only">GitHub account</span>
+                </a>
+            </div>
+        </footer>
+    </body>
 </html>
+        
