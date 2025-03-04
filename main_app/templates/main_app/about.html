@@ -1,5 +1,40 @@
-{% extends 'main_app/index.html' %} {% block content %}
-<body class="about">
-  <h1>About</h1>
-</body>
+{% extends 'main_app/index.html' %} {% load static %} {% block extra_css %}
+<style>
+  body {
+    background-image: url('{% static "images/about.png" %}') !important;
+    background-size: cover;
+    background-position: center;
+  }
+</style>
+{% endblock %} {% block content %}
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div
+    class="flex min-h-screen justify-around items-center max-w-8xl mx-auto px-4 pb-40 pl-[150px] pr-[250px]"
+  >
+    <div class="bg-white/20 backdrop-blur-lg rounded-none p-4 shadow-xl">
+      <img class="rounded-none w-64 h-96 object-cover border-4 border-white/50"
+      src="{% static "images/your-avatar.jpg" %}" alt="Profile Image" />
+    </div>
+    <div>
+      <div class="mb-6">
+        <h1 class="text-4xl font-bold text-gray-800">
+          A little bit about me..
+        </h1>
+      </div>
+      <div class="p-6 w-96">
+        <p class="text-base">
+          I'm an aspiring software engineer with a passion for creating
+          functional, user-friendly web applications. My journey into tech stems
+          from a diverse background that blends creativity, problem-solving, and
+          helping others. Years of working in customer-facing roles have taught
+          me the importance of empathy, adaptability, and clear communication.
+          My appreciation for design influences how I approach building digital
+          experiences—focusing on both aesthetics and seamless user
+          interactions. I enjoy bringing ideas to life through code, creating
+          solutions that are not only practical but visually engaging.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
 {% endblock %}

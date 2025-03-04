@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
     <title>Your Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    {% block extra_css %}{% endblock %}
   </head>
   <body>
     <!-- Custom cursor element -->
@@ -126,7 +127,7 @@
         </div>
       </div>
     </nav>
-
+    
     
 
     <script>
@@ -153,8 +154,8 @@
 </script>
 {% block content %}{% endblock %}
 <footer class="footer fixed bottom-0 left-0 w-full">
-    <div class="px-4 py-6 md:flex md:items-center md:justify-between backdrop-blur-lg bg-white/10 rounded-xl border border-white/20 shadow-xl">
-        <span class="text-sm text-gray-500 dark:text-gray-300 sm:text-center">© 2025 Dana Gabay
+    <div class="px-4 py-2 md:flex md:items-center md:justify-between backdrop-blur-lg bg-white/10 rounded-xl border border-white/20 shadow-xl">
+        <span class="text-sm text-gray-500 sm:text-center">© 2025 Dana Gabay
         </span>
         <div class="flex mt-4 sm:justify-center md:mt-0 space-x-5 rtl:space-x-reverse">
                 <a href="#" class="text-gray-600 hover:text-gray-900 dark:hover:text-white">
