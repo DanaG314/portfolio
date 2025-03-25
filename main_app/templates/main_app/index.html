@@ -79,8 +79,8 @@
             </a>
             <form action="" method="post" class="inline-flex">
               {% csrf_token %}
-              <button
-                type="submit"
+              <a
+                href="{% url 'projects' %}"
                 class="text-gray-600 hover:text-blue-200 inline-flex items-center"
               >
                 {% comment %}
@@ -99,7 +99,7 @@
                 </svg>
                 {% endcomment %}
                 <span class="ml-2">Projects</span>
-              </button>
+            </a>
             </form>
 
             <a
@@ -129,10 +129,8 @@
     </nav>
     
     
-
-    <script>
-      // Custom cursor functionality
-
+    
+{% comment %} 
       document.addEventListener('DOMContentLoaded', () => {
         const cursor = document.querySelector('.custom-cursor');
 
@@ -150,8 +148,8 @@
         document.addEventListener('mouseenter', () => {
             cursor.style.display = 'block';
         });
-    });
-</script>
+    }); {% endcomment %}
+{% comment %} </script> {% endcomment %}
 {% block content %}{% endblock %}
 <footer class="footer fixed bottom-0 left-0 w-full">
     <div class="px-4 py-2 md:flex md:items-center md:justify-between backdrop-blur-lg bg-white/10 rounded-xl border border-white/20 shadow-xl">
@@ -173,5 +171,4 @@
             </div>
         </footer>
     </body>
-</html>
-        
+    </html>        

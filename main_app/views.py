@@ -16,3 +16,14 @@ class Home(TemplateView):
 
 def about(request):
     return render(request, 'main_app/about.html')
+
+
+def projects_page(request):
+    projects = Project.objects.all()
+    context = {
+        'simon': projects.filter(title='Simon!').first(),
+        'binge_buddy': projects.filter(title='Binge Buddy').first(),
+        'legodex': projects.filter(title='LegoDex').first(),
+        'shelf_space': projects.filter(title='Shelf Space').first(),
+    }
+    return render(request, 'main_app/projects.html', context)

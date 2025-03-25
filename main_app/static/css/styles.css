@@ -16,9 +16,9 @@ body {
   }
 
   /* Hide default cursor */
-  * {
+  /* * {
     cursor: none;
-  }
+  } */
   
 
   /* Custom cursor */
