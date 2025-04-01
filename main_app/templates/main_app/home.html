@@ -46,18 +46,18 @@
     <div
       class="flex h-auto items-center max-w-8xl mx-auto px-20 pb-30 pr-[200px]"
     >
-      <div class="bg-white/20 backdrop-blur-lg rounded-none p-4 m-20 shadow-xl">
+      <div class="bg-white/20 backdrop-blur-lg rounded-none p-4 m-20 shadow-xl" data-aos="fade-right" >
         <img class="rounded-none w-64 h-96 object-cover border-4
         border-white/50" src="{% static "images/your-avatar.jpg" %}"
         alt="Profile Image" />
       </div>
       <div>
-        <div class="mb-6">
+        <div class="mb-6" data-aos="fade-left">
           <h2 class="text-4xl font-bold text-gray-800">
             A little bit about me..
           </h2>
         </div>
-        <div class="p-6 w-96">
+        <div class="p-6 w-96" data-aos="fade-left">
           <p class="text-base">
             I'm an aspiring software engineer with a passion for creating
             functional, user-friendly web applications. My journey into tech
@@ -161,13 +161,16 @@
     </div>
     <button
       id="showMoreBtn"
-      class="mt-4 px-4 py-2 bg-purple-400 text-white rounded"
+      class="mt-4 px-4 py-2 bg-blue-400 text-white rounded mb-10"
     >
       Show More
     </button>
   </div>
 </section>
-
+<section class="contact-section" data-aos="zoom-in">
+  <h2 class="text-3xl font-bold mb-[15px]">I'd love to stay connected!</h2>
+  <p>If you'd like to connect, discuss a project, or share insights, feel free to contact me anytime.</p>
+</section>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 <script>
@@ -353,6 +356,6 @@
         </div>
       </div>
     </section>
-  </div>
+    </div>
+    </div>
   {% endcomment %} {% endblock %}
-</div>

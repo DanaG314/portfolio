@@ -125,14 +125,26 @@ body {
 .project-links a {
   margin-right: 10px;
   display: inline-block;
-  color: rgb(183, 124, 247);
+  color: rgb(100, 145, 250);
 }
 
-.summary {
+.summary { 
   display: flex;
   justify-content: flex-start;
-  color: rgb(183, 124, 247);
+  color: rgb(100, 145, 250);
   cursor: pointer;
+}
+
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  max-width: 600px;
+  width: 90%;
+  margin: auto;
+  margin-bottom: 20px;
+  padding: 60px 20px;
 }
 
   /* Custom cursor */
