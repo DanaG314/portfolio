@@ -6,7 +6,7 @@
     alt="Avatar"
   />
   <h5 class="mb-2 text-xl font-medium leading-tight">{{ about.name }}</h5>
-  <p class="text-white dark:text-neutral-400 font-bold">
+  <p class="text-white font-bold">
     <a
       href=""
       class="typewrite"
@@ -39,12 +39,12 @@
   </div>
 </div>
 <section id="about" class="about-me">
-  <div class="max-w-7xl ml-[30px] px-4 sm:px-6 lg:px-8">
+  <div class="max-w-7xl px-4 sm:px-6 lg:px-8">
     <div
-      class="flex h-auto items-center max-w-8xl mx-auto px-20 pb-30 pr-[200px]"
+      class="flex items-center max-w-8xl mx-auto"
     >
-      <div class="bg-white/20 backdrop-blur-lg rounded-none p-4 m-20 shadow-xl" data-aos="fade-right" >
-        <img class="about-me rounded-none w-64 h-96 object-contain border-4
+      <div class="about-img bg-white/20 backdrop-blur-lg rounded-none p-4 m-10 shadow-xl" data-aos="fade-right" >
+        <img class="rounded-none w-full max- object-contain border-4
         border-white/50" src="{% static "images/pic2.png" %}"
         alt="Profile Image" />
       </div>
@@ -54,7 +54,7 @@
             A little bit about me..
           </h2>
         </div>
-        <div class="p-6 w-96" data-aos="fade-left">
+        <div class="p-6 w-[80%]" data-aos="fade-left">
           <p class="text-base">
             I'm an aspiring software engineer with a passion for creating
             functional, user-friendly web applications. My journey into tech
@@ -70,7 +70,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> 
 </section>
 <section class="skills-section">
   <div class="justify-center p-15">

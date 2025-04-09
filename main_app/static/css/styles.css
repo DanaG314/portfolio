@@ -18,19 +18,21 @@ body {
     padding: 0;
   }
 
-.about-me img {
-  height: fit-content;
-}
-
-.about {
-    background-image: url("../images/about.png");
-  }
 
 .skills-section, .project-section, .landing-section {
   margin: 0 auto;
   text-align: center;
   padding: 60px 20px;
 }
+
+.about-me {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 60px 20px;
+} 
+
+
 
 .skills-heading, .project-heading {
   margin-bottom: 10px;
@@ -73,7 +75,7 @@ body {
 }
 
 @media (min-width: 768px) {
-  .project-grid, .about {
+  .project-grid {
       grid-gap: 2rem;
       display: grid;
       gap: 2rem;
@@ -163,7 +165,6 @@ body {
   padding: 10px 20px;
   text-decoration: none;
   margin-top: 20px;
-  width: 35%;
 }
 
   /* Custom cursor */
@@ -267,80 +268,22 @@ body {
     color: rgba(255, 255, 255, 0.6);
   }
 
-  /* About section */
-  .about {
+  /* About section
+   .about-me {
     margin-bottom: 60px;
   }
 
-  .about h2 {
+  .about-me h2 {
     font-size: 32px;
     margin-bottom: 20px;
   }
 
-  .about p {
+  .about-me p {
     font-size: 18px;
     line-height: 1.8;
-    color: rgba(255, 255, 255, 0.8);
-  }
+    color: rgba(8, 8, 8, 0.8);
+  }  */
 
-  /* Work experience section */
-  .work-experience h2 {
-    font-size: 32px;
-    margin-bottom: 30px;
-  }
 
-  .job {
-    display: flex;
-    margin-bottom: 40px;
-  }
 
-  .job-date {
-    width: 120px;
-    color: rgba(255, 255, 255, 0.6);
-  }
-
-  .job-details {
-    flex: 1;
-  }
-
-  .job-title {
-    font-size: 24px;
-    margin-bottom: 15px;
-    display: flex;
-    align-items: center;
-  }
-
-  .job-title svg {
-    margin-left: 10px;
-    width: 16px;
-    height: 16px;
-  }
-
-  .job-description {
-    margin-bottom: 20px;
-    color: rgba(255, 255, 255, 0.8);
-  }
-
-  .tech-stack {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .tech-item {
-    margin-right: 20px;
-    margin-bottom: 10px;
-    color: rgba(255, 255, 255, 0.6);
-    display: flex;
-    align-items: center;
-  }
-
-  .tech-item:before {
-    content: '•';
-    margin-right: 8px;
-  }
-
-  /* Remove the random dot */
-  .random-dot {
-    display: none;
-  }
-
+  
