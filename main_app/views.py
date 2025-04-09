@@ -1,10 +1,11 @@
 from django.shortcuts import render
+from django.core.mail import send_mail
+from .forms import EmailForm
 from django.views.generic import TemplateView
 from main_app.models import About, Project
 
 
-# Create your views here.
-from django.http import HttpResponse
+
 
 class Home(TemplateView):
     template_name = 'main_app/home.html'
@@ -23,6 +24,16 @@ class Home(TemplateView):
 
 def about(request):
     return render(request, 'main_app/about.html')
+
+# def email_view(request):
+#     if request.method == 'POST':
+#         form = EmailForm(request.POST)
+#         if form.is_valid():
+#             user_email = form.cleaned_data['email']
+
+#             send_mail(
+
+#             )
 
 
 # def projects_page(request):

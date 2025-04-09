@@ -7,6 +7,7 @@ body {
     background-image: url("../images/projects.png");
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
     color: #040404;
     line-height: 1.6;
   }
@@ -16,6 +17,10 @@ body {
     margin: 0;
     padding: 0;
   }
+
+.about-me img {
+  height: fit-content;
+}
 
 .about {
     background-image: url("../images/about.png");
@@ -68,7 +73,7 @@ body {
 }
 
 @media (min-width: 768px) {
-  .project-grid {
+  .project-grid, .about {
       grid-gap: 2rem;
       display: grid;
       gap: 2rem;
@@ -79,8 +84,7 @@ body {
 @media (min-width: 992px) {
   .project-grid {
       grid-gap: 2rem;
-      display: grid
-;
+      display: grid;
       gap: 2rem;
       grid-template-columns: 1fr 1fr 1fr;
   }
@@ -125,13 +129,16 @@ body {
 .project-links a {
   margin-right: 10px;
   display: inline-block;
-  color: rgb(100, 145, 250);
+  color: white;
+  background-color: #f1adab;
+  border-radius: 5px;
+  width: 90%;
+  max-width: 600px;
 }
 
 .summary { 
   display: flex;
   justify-content: flex-start;
-  color: rgb(100, 145, 250);
   cursor: pointer;
 }
 
@@ -145,6 +152,18 @@ body {
   margin: auto;
   margin-bottom: 20px;
   padding: 60px 20px;
+}
+
+.download-cv, .btn-download {
+  background-color: #f1adab;
+  border-radius: 5px;
+  justify-self: center;
+  color: white;
+  font-weight: 500;
+  padding: 10px 20px;
+  text-decoration: none;
+  margin-top: 20px;
+  width: 35%;
 }
 
   /* Custom cursor */

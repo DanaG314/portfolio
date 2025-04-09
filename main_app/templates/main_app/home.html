@@ -1,12 +1,12 @@
 {% extends 'main_app/index.html' %} {% load static %} {% block content %}
 <div class="landing-section">
   <img
-    src="https://tecdn.b-cdn.net/img/new/avatars/5.webp"
-    class="mx-auto mb-4 w-32 rounded-lg"
+    src="static/images/pic.JPG"
+    class="mx-auto mb-4 w-64 h-64 rounded-lg object-cover object-center"
     alt="Avatar"
   />
   <h5 class="mb-2 text-xl font-medium leading-tight">{{ about.name }}</h5>
-  <p class="text-neutral-500 dark:text-neutral-400">
+  <p class="text-white dark:text-neutral-400 font-bold">
     <a
       href=""
       class="typewrite"
@@ -32,23 +32,20 @@
         back. With a passion for clean code, creative design, and
         problem-solving.
       </p>
-
-      <p class="text-gray-600 leading-relaxed mt-4">
-        My passion is web development and web design, and I'm dedicated to . I
-        enjoy [your interests] and am always looking for new challenges in [your
-        field].
-      </p>
+      <div class="download-cv">
+        <a href="/static/DanaGCV.pdf" class="btn-download" download>Download CV</a>
+      </div>
     </div>
   </div>
 </div>
-<section class="about-me">
+<section id="about" class="about-me">
   <div class="max-w-7xl ml-[30px] px-4 sm:px-6 lg:px-8">
     <div
       class="flex h-auto items-center max-w-8xl mx-auto px-20 pb-30 pr-[200px]"
     >
       <div class="bg-white/20 backdrop-blur-lg rounded-none p-4 m-20 shadow-xl" data-aos="fade-right" >
-        <img class="rounded-none w-64 h-96 object-cover border-4
-        border-white/50" src="{% static "images/your-avatar.jpg" %}"
+        <img class="about-me rounded-none w-64 h-96 object-contain border-4
+        border-white/50" src="{% static "images/pic2.png" %}"
         alt="Profile Image" />
       </div>
       <div>
@@ -93,13 +90,13 @@
     <img src="/static/images/bootstrap.png" class="skill-icon" data-aos="zoom-in"/>
   </div>
 </section>
-<section class="project-section">
+<section id="projects" class="project-section">
   <div class="project-container">
     <div class="project-header">
-      <h2 class="project-heading text-2xl font-semibold p-25">Projects</h2>
-      <h1 class="project-subheading text-3xl font-bold">
+      <h1 class="project-heading  text-3xl font-bold p-25">Projects</h1>
+      <h2 class="project-subheading text-2xl font-semibold ">
         What have I created?
-      </h1>
+      </h2>
     </div>
     <div class="project-grid">
       <div class="project-card">
@@ -107,7 +104,7 @@
         <div class="project-details">
           <h2 class="text-2xl font-semibold p-25">{{ simon.title }}</h2>
           <details>
-            <summary class="summary">Description</summary>
+            <summary class="summary">Description ⏚</summary>
             <p>{{ simon.description }}</p>
           </details>
         </div>
@@ -121,7 +118,7 @@
         <div class="project-details">
           <h2 class="text-2xl font-semibold p-25">{{ binge_buddy.title }}</h2>
           <details>
-            <summary class="summary">Description</summary>
+            <summary class="summary">Description ⏚</summary>
             <p>{{ binge_buddy.description }}</p>
           </details>
         </div>
@@ -135,7 +132,7 @@
         <div class="project-details">
           <h2 class="text-2xl font-semibold p-25">{{ legodex.title }}</h2>
           <details>
-            <summary class="summary">Description</summary>
+            <summary class="summary">Description ⏚</summary>
             <p>{{ legodex.description }}</p>
           </details>
         </div>
@@ -149,7 +146,7 @@
         <div class="project-details">
           <h2 class="text-2xl font-semibold p-25">{{ shelf_space.title }}</h2>
           <details>
-            <summary class="summary">Description</summary>
+            <summary class="summary">Description ⏚</summary>
             <p>{{ shelf_space.description }}</p>
           </details>
         </div>
@@ -161,13 +158,13 @@
     </div>
     <button
       id="showMoreBtn"
-      class="mt-4 px-4 py-2 bg-blue-400 text-white rounded mb-10"
+      class="mt-4 px-4 py-2 bg-[#f1adab] text-white rounded mb-10"
     >
       Show More
     </button>
   </div>
 </section>
-<section class="contact-section" data-aos="zoom-in">
+<section id="contact" class="contact-section" data-aos="zoom-in">
   <h2 class="text-3xl font-bold mb-[15px]">I'd love to stay connected!</h2>
   <p>If you'd like to connect, discuss a project, or share insights, feel free to contact me anytime.</p>
 </section>

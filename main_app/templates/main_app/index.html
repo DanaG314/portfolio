@@ -27,7 +27,7 @@
               alt="Your Avatar"
             />
             {% endcomment %}
-            <div class="flex">
+            {% comment %} <div class="flex">
               <a
                 href="{% url 'home' %}"
                 class="text-gray-600 hover:text-yellow-100 inline-flex items-center"
@@ -47,7 +47,7 @@
                   />
                 </svg>
               </a>
-            </div>
+            </div> {% endcomment %}
             </div>
             {% comment %}
             <a href="#" class="text-xl font-medium mt-8 rainbow-text">
@@ -58,7 +58,7 @@
 
           <div class="flex items-center space-x-6">
             <a
-              href="{% url 'about' %}"
+              href="#about"
               class="text-gray-600 hover:text-pink-200 inline-flex items-center"
             >
               {% comment %}
@@ -81,7 +81,7 @@
             <form action="" method="post" class="inline-flex">
               {% csrf_token %}
               <a
-                href=""
+                href="#projects"
                 class="text-gray-600 hover:text-blue-200 inline-flex items-center"
               >
                 {% comment %}
@@ -104,7 +104,7 @@
             </form>
 
             <a
-              href=""
+              href="#contact"
               class="text-gray-600 hover:text-yellow-100 inline-flex items-center"
             >
               {% comment %}
