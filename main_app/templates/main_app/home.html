@@ -2,7 +2,7 @@
 <div class="landing-section">
   <img
     src="static/images/pic.JPG"
-    class="mx-auto mb-4 w-64 h-64 rounded-lg object-cover object-center"
+    class="mx-auto mb-4 w-40 h-40 sm:w-48 sm:h-48 md:w-64 md:h-64 rounded-lg object-cover object-center"
     alt="Avatar"
   />
   <h5 class="mb-2 text-xl font-medium leading-tight">{{ about.name }}</h5>
@@ -39,22 +39,22 @@
   </div>
 </div>
 <section id="about" class="about-me">
-  <div class="max-w-7xl px-4 sm:px-6 lg:px-8">
+  <div class="max-w-7xl px-4 sm:px-6 lg:px-8 w-full">
     <div
-      class="flex items-center max-w-8xl mx-auto"
+      class="flex flex-col md:flex-row items-center max-w-8xl mx-auto w-full"
     >
-      <div class="about-img bg-white/20 backdrop-blur-lg rounded-none p-4 m-10 shadow-xl" data-aos="fade-right" >
-        <img class="rounded-none w-full max- object-contain border-4
+      <div class="about-img bg-white/20 backdrop-blur-lg rounded-none w-64 h-64 mb-6 md:mb-0 md:mr-10 shadow-xl" data-aos="fade-right" >
+        <img class="rounded-none w-64 h-64 m-10 object-contain 
         border-white/50" src="{% static "images/pic2.png" %}"
         alt="Profile Image" />
       </div>
-      <div>
-        <div class="mb-6" data-aos="fade-left">
-          <h2 class="text-4xl font-bold text-gray-800">
+      <div class="flex flex-col w-full md:w-3/4">
+        <div class="mb-4 mt-4 md:mt-0" data-aos="fade-left">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-800">
             A little bit about me..
           </h2>
         </div>
-        <div class="p-6 w-[80%]" data-aos="fade-left">
+        <div class="w-full" data-aos="fade-left">
           <p class="text-base">
             I'm an aspiring software engineer with a passion for creating
             functional, user-friendly web applications. My journey into tech
