@@ -167,7 +167,23 @@
 <section id="contact" class="contact-section" data-aos="zoom-in">
   <h2 class="text-3xl font-bold mb-[15px]">I'd love to stay connected!</h2>
   <p>If you'd like to connect, discuss a project, or share insights, feel free to contact me anytime.</p>
+ 
+  <form class="contact-form" method="post">
+    {% csrf_token %}
+    
+    <label for="id_email">Email:</label>
+    {{ form.email }}
+    
+    <label for="id_message">Message:</label>
+    {{ form.message }}
+    
+    <button class="contact-button" type="submit">Send</button>
+  </form>
+
+  <p class='success-message' style="color: green; display: none;">Thanks! Your message has been sent.</p>
+
 </section>
+
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 <script>
@@ -260,6 +276,34 @@
   });
   AOS.init({
     duration: 1000, // Animation duration in milliseconds
+  });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.querySelector('.contact-form');
+    const successMsg = document.querySelector('.success-message');
+  
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+  
+      const formData = new FormData(form);
+  
+      fetch("", {
+        method: "POST",
+        body: formData,
+        headers: {
+          "X-Requested-With": "XMLHttpRequest",
+        },
+      })
+      .then(response => response.text())
+      .then(data => {
+        console.log('Response received:', data);
+        form.style.display = "none";
+        successMsg.style.display = "block";
+      })
+      .catch(error => {
+        console.error("Error:", error);
+      });
+    });
   });
 </script>
 

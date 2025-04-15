@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.core.mail import send_mail
 from .forms import EmailForm
 from django.views.generic import TemplateView
@@ -20,28 +20,30 @@ class Home(TemplateView):
         context['legodex']= projects.filter(title='LegoDex').first()
         context['shelf_space']= projects.filter(title='Shelf Space').first()
         
+        context['form'] = EmailForm()
+
         return context
 
-def about(request):
-    return render(request, 'main_app/about.html')
+    def post(self, request, *args, **kwargs):
+        form = EmailForm(request.POST)
+        context = self.get_context_data()
 
-# def email_view(request):
-#     if request.method == 'POST':
-#         form = EmailForm(request.POST)
-#         if form.is_valid():
-#             user_email = form.cleaned_data['email']
+        if form.is_valid():
+            email = form.cleaned_data['email']
+            message = form.cleaned_data['message']  # ⬅️ Get the message
 
-#             send_mail(
+            send_mail(
+                subject='New Contact Form Submission',
+                message=f'Email: {email}\n\nMessage:\n{message}',  # ⬅️ Include message
+                from_email=email,
+                recipient_list=['danagabay@msn.com'],
+                fail_silently=False,
+            )
 
-#             )
+            context['success'] = True
+            context['form'] = EmailForm()
+        else:
+            context['form'] = form
 
+        return self.render_to_response(context)
 
-# def projects_page(request):
-#     projects = Project.objects.all()
-#     context = {
-#         'simon': projects.filter(title='Simon!').first(),
-#         'binge_buddy': projects.filter(title='Binge Buddy').first(),
-#         'legodex': projects.filter(title='LegoDex').first(),
-#         'shelf_space': projects.filter(title='Shelf Space').first(),
-#     }
-#     return render(request, 'main_app/projects.html', context)
