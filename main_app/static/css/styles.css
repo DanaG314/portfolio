@@ -109,6 +109,73 @@ body {
   grid-template-columns: 1fr;
 }
 
+@media (max-width: 480px) {
+  .contact-section {
+    width: 100%;
+    padding: 20px 15px;
+    box-sizing: border-box;
+  }
+
+  .contact-form {
+    gap: 10px;
+  }
+
+  .contact-button {
+    width: 100%;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    background-image: url("../images/projects.png") !important;
+    background-position: center center !important;
+    background-size: cover !important;
+    background-attachment: fixed !important;
+    width: 100% !important;
+    min-height: 100vh !important;
+  }
+  .mobile-menu-button {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    z-index: 30;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .show {
+    display: flex !important;
+  }
+  
+  /* Adjust navigation container for mobile */
+  nav .max-w-7xl {
+    flex-direction: column;
+    padding: 0.5rem 1rem;
+  }
+  
+  nav .flex.justify-between {
+    height: auto;
+  }
+  
+  #mobile-menu-items {
+    width: 100%;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  #mobile-menu-items a {
+    font-size: 1.2rem;
+    padding: 0.5rem 0;
+    width: 100%;
+    text-align: center;
+  }
+}
+
 @media (min-width: 768px) {
   .project-grid {
     grid-template-columns: 1fr 1fr;
@@ -247,7 +314,7 @@ body {
   justify-content: center;
   text-align: center;
   max-width: 600px;
-  width: 90%;
+  width: 100%;
   margin: auto;
   margin-bottom: 25px;
   padding: 40px 30px;
