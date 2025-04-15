@@ -12,70 +12,16 @@
     {% block extra_css %}{% endblock %}
   </head>
   <body>
-    <!-- Custom cursor element -->
-    <div class="custom-cursor"></div>
-
-    <!-- Header with logo and wallet -->
     <nav class="backdrop-blur-lg bg-white/10 rounded-xl border border-white/20 shadow-xl">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-md">
         <div class="flex justify-between h-16">
           <div class="flex items-center">
-            {% comment %}
-            <img
-              class="avatar2"
-              src="{% static 'images/your-avatar.jpg' %}"
-              alt="Your Avatar"
-            />
-            {% endcomment %}
-            {% comment %} <div class="flex">
-              <a
-                href="{% url 'home' %}"
-                class="text-gray-600 hover:text-yellow-100 inline-flex items-center"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  class="size-6"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
-                  />
-                </svg>
-              </a>
-            </div> {% endcomment %}
-            </div>
-            {% comment %}
-            <a href="#" class="text-xl font-medium mt-8 rainbow-text">
-              Dana Gabay
-            </a>
           </div>
-          {% endcomment %}
-
           <div class="flex items-center space-x-6">
             <a
               href="#about"
               class="text-gray-600 hover:text-white inline-flex items-center"
             >
-              {% comment %}
-              <svg
-                class="w-5 h-5 nav-icon"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
-                />
-              </svg>
-              {% endcomment %}
               <span class="ml-2">About</span>
             </a>
             <form action="" method="post" class="inline-flex">
@@ -84,21 +30,6 @@
                 href="#projects"
                 class="text-gray-600 hover:text-white inline-flex items-center"
               >
-                {% comment %}
-                <svg
-                  class="w-5 h-5 nav-icon"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"
-                  />
-                </svg>
-                {% endcomment %}
                 <span class="ml-2">Projects</span>
             </a>
             </form>
@@ -107,21 +38,6 @@
               href="#contact"
               class="text-gray-600 hover:text-white inline-flex items-center"
             >
-              {% comment %}
-              <svg
-                class="w-5 h-5 nav-icon"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"
-                />
-              </svg>
-              {% endcomment %}
               <span class="ml-2">Contact</span>
             </a>
           </div>
@@ -130,27 +46,6 @@
     </nav>
     
     
-    
-{% comment %} 
-      document.addEventListener('DOMContentLoaded', () => {
-        const cursor = document.querySelector('.custom-cursor');
-
-        document.addEventListener('mousemove', (e) => {
-          cursor.style.left = e.clientX + 'px';
-          cursor.style.top = e.clientY + 'px';
-        });
-
-        // Hide cursor when mouse leaves window
-        document.addEventListener('mouseleave', () => {
-          cursor.style.display = 'none';
-        });
-
-        // Show cursor when mouse enters window
-        document.addEventListener('mouseenter', () => {
-            cursor.style.display = 'block';
-        });
-    }); {% endcomment %}
-{% comment %} </script> {% endcomment %}
 {% block content %}{% endblock %}
 <footer class="footer relative bottom-0 left-0 w-full">
     <div class="px-4 py-2 md:flex md:items-center md:justify-between backdrop-blur-lg bg-white/10 rounded-xl border border-white/20 shadow-xl">

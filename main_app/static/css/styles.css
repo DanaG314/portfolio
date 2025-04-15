@@ -345,11 +345,11 @@ body {
 }
 
 .contact-form textarea {
-  min-height: 80px; /* Reduced from 120px */
-  height: 100px; /* Set a fixed initial height */
-  resize: vertical; /* Still allows users to resize vertically if needed */
-  width: 100%; /* You could also use a smaller percentage if you want it narrower */
-  max-width: 100%; /* Ensures it doesn't exceed container width */
+  min-height: 80px; 
+  height: 100px; 
+  resize: vertical;
+  width: 100%; 
+  max-width: 100%; 
 }
 
 .btn-download {
@@ -385,96 +385,3 @@ body {
   text-align: center;
   width: 100%;
 }
-
-  /* Custom cursor */
-  .custom-cursor {
-    position: fixed;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.5);
-    pointer-events: none;
-    transform: translate(-50%, -50%);
-    z-index: 9999;
-    mix-blend-mode: difference;
-  }
-
-  /* Header styling */
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 40px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 100;
-  }
-
-  .logo img {
-    height: 30px;
-    width: auto;
-  }
-
- 
-
-  /* Main content container */
-  .container {
-    max-width: 1200px;
-    margin: 100px auto 40px;
-    padding: 0 40px;
-  }
-
-  /* Profile section */
-  .profile {
-    display: flex;
-    align-items: center;
-    margin-bottom: 60px;
-  }
-
-  .avatar {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    overflow: hidden;
-    border: 2px solid rgba(255, 255, 255, 0.2);
-    margin-right: 30px;
-  }
-  
-  .avatar2 {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    overflow: hidden;
-    border: 2px solid rgba(255, 255, 255, 0.2);
-    margin-right: 20px;
-    margin-top: 40px;
-    /* margin-right: 30px; */
-  }
-
-  .avatar img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .profile-info h1 {
-    font-size: 42px;
-    margin: 0 0 10px 0;
-  }
-
-  .profile-info h2 {
-    font-size: 24px;
-    font-weight: normal;
-    margin: 0 0 10px 0;
-    color: rgba(255, 255, 255, 0.8);
-  }
-
-  .profile-info .username {
-    color: rgba(255, 255, 255, 0.6);
-  }
-
-
-
-  

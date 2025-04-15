@@ -33,7 +33,9 @@
         problem-solving.
       </p>
       <div class="download-cv">
-        <a href="/static/DanaGCV.pdf" class="btn-download" download>Download CV</a>
+        <a href="/static/DanaGCV.pdf" class="btn-download" download
+          >Download CV</a
+        >
       </div>
     </div>
   </div>
@@ -43,10 +45,12 @@
     <div
       class="flex flex-col md:flex-row items-center max-w-8xl mx-auto w-full"
     >
-      <div class="about-img bg-white/20 backdrop-blur-lg rounded-none w-64 h-64 mb-6 md:mb-0 md:mr-10 shadow-xl" data-aos="fade-right" >
-        <img class="rounded-none w-64 h-64 m-10 object-contain 
-        border-white/50" src="{% static "images/pic2.png" %}"
-        alt="Profile Image" />
+      <div
+        class="about-img bg-white/20 backdrop-blur-lg rounded-none w-64 h-64 mb-6 md:mb-0 md:mr-10 shadow-xl"
+        data-aos="fade-right"
+      >
+        <img class="rounded-none w-64 h-64 m-10 object-contain border-white/50"
+        src="{% static "images/pic2.png" %}" alt="Profile Image" />
       </div>
       <div class="flex flex-col w-full md:w-3/4">
         <div class="mb-4 mt-4 md:mt-0" data-aos="fade-left">
@@ -70,31 +74,55 @@
         </div>
       </div>
     </div>
-  </div> 
+  </div>
 </section>
 <section class="skills-section">
   <div class="justify-center p-15">
-    <h2 class="skills-heading text-2xl font-semibold p-25" data-aos="fade-up">Skills</h2>
-    <h1 class="skills-subheading text-3xl font-bold" data-aos="fade-up">What skills do I have?</h1>
+    <h2 class="skills-heading text-2xl font-semibold p-25" data-aos="fade-up">
+      Skills
+    </h2>
+    <h1 class="skills-subheading text-3xl font-bold" data-aos="fade-up">
+      What skills do I have?
+    </h1>
   </div>
   <div class="skills-icons">
-    <img src="/static/images/html.png" class="skill-icon" data-aos="zoom-in"/>
-    <img src="/static/images/css-3.png" class="skill-icon" data-aos="zoom-in"/>
-    <img src="/static/images/js.png" class="skill-icon" data-aos="zoom-in"/>
-    <img src="/static/images/python3.png" class="skill-icon" data-aos="zoom-in"/>
-    <img src="/static/images/atom.png" class="skill-icon" data-aos="zoom-in"/>
-    <img src="/static/images/django.png" class="skill-icon" data-aos="zoom-in"/>
-    <img src="/static/images/node.js.png" class="skill-icon" data-aos="zoom-in"/>
-    <img src="/static/images/sql.png" class="skill-icon" data-aos="zoom-in"/>
-    <img src="/static/images/tailwind.png" class="skill-icon" data-aos="zoom-in"/>
-    <img src="/static/images/bootstrap.png" class="skill-icon" data-aos="zoom-in"/>
+    <img src="/static/images/html.png" class="skill-icon" data-aos="zoom-in" />
+    <img src="/static/images/css-3.png" class="skill-icon" data-aos="zoom-in" />
+    <img src="/static/images/js.png" class="skill-icon" data-aos="zoom-in" />
+    <img
+      src="/static/images/python3.png"
+      class="skill-icon"
+      data-aos="zoom-in"
+    />
+    <img src="/static/images/atom.png" class="skill-icon" data-aos="zoom-in" />
+    <img
+      src="/static/images/django.png"
+      class="skill-icon"
+      data-aos="zoom-in"
+    />
+    <img
+      src="/static/images/node.js.png"
+      class="skill-icon"
+      data-aos="zoom-in"
+    />
+    <img src="/static/images/sql.png" class="skill-icon" data-aos="zoom-in" />
+    <img
+      src="/static/images/tailwind.png"
+      class="skill-icon"
+      data-aos="zoom-in"
+    />
+    <img
+      src="/static/images/bootstrap.png"
+      class="skill-icon"
+      data-aos="zoom-in"
+    />
   </div>
 </section>
 <section id="projects" class="project-section">
   <div class="project-container">
     <div class="project-header">
-      <h1 class="project-heading  text-3xl font-bold p-25">Projects</h1>
-      <h2 class="project-subheading text-2xl font-semibold ">
+      <h1 class="project-heading text-3xl font-bold p-25">Projects</h1>
+      <h2 class="project-subheading text-2xl font-semibold">
         What have I created?
       </h2>
     </div>
@@ -166,24 +194,27 @@
 </section>
 <section id="contact" class="contact-section" data-aos="zoom-in">
   <h2 class="text-3xl font-bold mb-[15px]">I'd love to stay connected!</h2>
-  <p>If you'd like to connect, discuss a project, or share insights, feel free to contact me anytime.</p>
- 
+  <p>
+    If you'd like to connect, discuss a project, or share insights, feel free to
+    contact me anytime.
+  </p>
+
   <form class="contact-form" method="post">
     {% csrf_token %}
-    
+
     <label for="id_email">Email:</label>
     {{ form.email }}
-    
+
     <label for="id_message">Message:</label>
     {{ form.message }}
-    
+
     <button class="contact-button" type="submit">Send</button>
   </form>
 
-  <p class='success-message' style="color: green; display: none;">Thanks! Your message has been sent.</p>
-
+  <p class="success-message" style="color: green; display: none">
+    Thanks! Your message has been sent.
+  </p>
 </section>
-
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 <script>
@@ -258,10 +289,10 @@
       }
     });
 
-  showMoreBtn.addEventListener('click', function () {
-    let hiddenProjects = Array.from(projects).filter(
-      (project) => project.style.display === 'none'
-    );
+    showMoreBtn.addEventListener('click', function () {
+      let hiddenProjects = Array.from(projects).filter(
+        (project) => project.style.display === 'none'
+      );
 
       // Show only the next 3 hidden projects
       for (let i = 0; i < 3 && i < hiddenProjects.length; i++) {
@@ -278,125 +309,32 @@
     duration: 1000, // Animation duration in milliseconds
   });
 
-  document.addEventListener("DOMContentLoaded", function () {
+  document.addEventListener('DOMContentLoaded', function () {
     const form = document.querySelector('.contact-form');
     const successMsg = document.querySelector('.success-message');
-  
+
     form.addEventListener('submit', function (e) {
       e.preventDefault();
-  
+
       const formData = new FormData(form);
-  
-      fetch("", {
-        method: "POST",
+
+      fetch('', {
+        method: 'POST',
         body: formData,
         headers: {
-          "X-Requested-With": "XMLHttpRequest",
+          'X-Requested-With': 'XMLHttpRequest',
         },
       })
-      .then(response => response.text())
-      .then(data => {
-        console.log('Response received:', data);
-        form.style.display = "none";
-        successMsg.style.display = "block";
-      })
-      .catch(error => {
-        console.error("Error:", error);
-      });
+        .then((response) => response.text())
+        .then((data) => {
+          console.log('Response received:', data);
+          form.style.display = 'none';
+          successMsg.style.display = 'block';
+        })
+        .catch((error) => {
+          console.error('Error:', error);
+        });
     });
   });
 </script>
-
-  {% comment %}
-  <div class="container">
-    {% endcomment %}
-    <!-- Profile section -->
-    {% comment %}
-    <section class="profile">
-      <div class="avatar">
-        <img src="{% static 'images/your-avatar.jpg' %}" alt="Your Avatar" />
-      </div>
-      <div class="profile-info">
-        <h1>Dana Gabay</h1>
-        <h2>Fullstack Web Developer</h2>
-        <div class="username">your-username.eth</div>
-      </div>
-    </section>
-    {% endcomment %}
-
-    <!-- About section -->
-    {% comment %}
-    <section class="about">
-      <h2>About</h2>
-      <p>
-        GM, I'm [Your Name]. I enjoy building dynamic, creative products from
-        start to finish. Focused on developing intuitive experiences that
-        constantly grow and improve based on user metrics. Always shipping.
-      </p>
-    </section>
-    {% endcomment %}
-
-    <!-- Work experience section -->
-    {% comment %}
-    <section class="work-experience">
-      <h2>Work Experience</h2>
-
-      <div class="job">
-        <div class="job-date">2022 - present</div>
-        <div class="job-details">
-          <div class="job-title">
-            Senior Developer – Company Name
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-            >
-              <path d="M7 17L17 7M17 7H7M17 7V17"></path>
-            </svg>
-          </div>
-          <div class="job-description">
-            Brief description of your role and key achievements. Focus on
-            results and specific projects you completed.
-          </div>
-          <div class="tech-stack">
-            <span class="tech-item">React</span>
-            <span class="tech-item">Node.js</span>
-            <span class="tech-item">TypeScript</span>
-            <span class="tech-item">Other Tech</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="job">
-        <div class="job-date">2020 - 2022</div>
-        <div class="job-details">
-          <div class="job-title">
-            Developer Role – Previous Company
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-            >
-              <path d="M7 17L17 7M17 7H7M17 7V17"></path>
-            </svg>
-          </div>
-          <div class="job-description">
-            Led a team of developers to build products. Collaborated closely
-            with product team to deliver features on time and track objectives.
-          </div>
-          <div class="tech-stack">
-            <span class="tech-item">JavaScript</span>
-            <span class="tech-item">CSS</span>
-            <span class="tech-item">Python</span>
-            <span class="tech-item">Other Tech</span>
-          </div>
-        </div>
-      </div>
-    </section>
-    </div>
-    </div>
-  {% endcomment %} {% endblock %}
+{% endblock %}
